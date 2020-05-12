@@ -5,23 +5,23 @@ import org.scalatest.FunSuite
 class BracketsTest extends FunSuite {
 
   test("first") {
-    assert(Brackets.compute("[]") == "true")
+    assert(Brackets.compute("[]") == "Success")
   }
 
   test("second") {
-    assert(Brackets.compute("{}[]") == "true")
+    assert(Brackets.compute("{}[]") == "Success")
   }
 
   test("third") {
-    assert(Brackets.compute("[()]") == "true")
+    assert(Brackets.compute("[()]") == "Success")
   }
 
   test("fourth") {
-    assert(Brackets.compute("(())") == "true")
+    assert(Brackets.compute("(())") == "Success")
   }
 
   test("fifth") {
-    assert(Brackets.compute("{[]}()") == "true")
+    assert(Brackets.compute("{[]}()") == "Success")
   }
 
   test("sixth") {
@@ -33,7 +33,7 @@ class BracketsTest extends FunSuite {
   }
 
   test("eighth") {
-    assert(Brackets.compute("foo(bar);") == "true")
+    assert(Brackets.compute("foo(bar);") == "Success")
   }
 
   test("ninth") {
